@@ -1,8 +1,10 @@
 handler = async (m, {command, conn}) => {
     if (command == 'nsfwloli') {
+        m.reply(wait)
         haha = await conn.getBuffer(`https://api-faza.herokuapp.com/api/wallpaper/nsfwloli?apikey=FZDEVELOPER`)
         conn.sendFile(m.chat, haha, '', 'tobat', m)
     } else {
+        m.reply(wait)
         haha = await conn.getBuffer(`https://api-faza.herokuapp.com/api/nsfw/${command.replace('nsfw', '')}?apikey=FZDEVELOPER`)
         conn.sendFile(m.chat, haha, '', `tobat ${m.name}`, m)
     }
